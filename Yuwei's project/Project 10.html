@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的导航栏效果</title>
+    <style>
+        #main{
+            margin: 5px auto;
+            width: 1100px;
+        }
+        ul{
+            margin:auto;
+            width: auto;
+        }
+        li{
+            list-style: none;
+            text-align: center;
+            margin: 0 -2px;
+            display: inline-block;
+            float: left;
+        }
+        #left{
+            background: url("img/nav_bg.png");
+            background-position: 0 -36px;
+            height: 36px;
+            width: 10px;
+            line-height: 36px;
+            overflow: hidden;
+
+        }
+        #right{
+            background: url("img/nav_bg.png");
+            background-position: -98px -72px;
+            height: 36px;
+            width: 10px;
+            line-height: 36px;
+            overflow: hidden;
+
+
+        }
+        li a.big{
+            background: url("img/nav_bg.png");
+            background-position: 0 0px;
+            width: 108px;
+            height: 36px;
+            line-height: 36px;
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            color: snow;
+        }
+        li a.big:hover{
+            background: url("img/nav_bg.png") no-repeat;background-position: 0 -144px;
+            width: 108px;
+        }
+        .show{
+            position: relative;
+            left: 40px;
+            top: 0px;
+            float: left;
+        }
+        #head{
+            background: url("img/nav_bg.png") no-repeat;
+            background-position: 0 -262px;
+            width: 108px;
+            height: 3px;
+            z-index: 100;
+        }
+        #container{
+            position: absolute;
+
+            top: 2px;
+            left: -20px;
+        }
+        #cont{
+            float: left;
+            background: url("img/nav_bg.png");
+            background-repeat:repeat-x;
+            background-position: 0 -207px;
+            width: auto;
+            height: 27px;
+            white-space:nowrap;
+        }
+        #cotl{
+            float: left;
+            background: url("img/nav_bg.png") no-repeat;
+            background-position: 0 -180px;
+            width: 10px;
+            height: 27px;
+            overflow: hidden;
+        }
+        #cotr{
+            float: left;
+            background: url("img/nav_bg.png") no-repeat;
+            background-position: -100px -234px;
+            margin: 0;
+            width: 8px;
+            height: 27px;
+            z-index: -100;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <ul>
+        <li>
+            <div id="left"></div>
+        </li>
+        <li>
+            <a href="javascript:;"class="big">站长之家</a>
+        </li>
+        <li><a href="javascript:;" class="big">行业新闻</a></li>
+        <li><a href="javascript:;" class="big">站长在线</a>
+            <div class="show">
+                <div id="head"></div>
+                <div id="container">
+                    <ul>
+                    <li><div id="cotl"></div></li>
+                    <li><div id="cont">&nbsp;&nbsp;<a href="">业界动态</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">收购融资</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">门户动态</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">搜索引擎</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                            href="">网络游戏</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">电子商务</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">广告传媒</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">厂商开发</a>&nbsp;&nbsp;</div>
+                    </li><li><div id="cotr"></div></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li><a href="javascript:;" class="big">网站运营</a></li>
+        <li><a href="javascript:;" class="big">设计在线</a></li>
+        <li><a href="javascript:;" class="big">网络编程</a></li>
+        <li><a href="javascript:;" class="big">联盟咨询</a></li>
+        <li><a href="javascript:;" class="big">服务器</a></li>
+        <li>
+            <div id="right"></div>
+        </li>
+
+    </ul>
+    <div style="clear: both"></div>
+</div>
+
+</body>
+</html>

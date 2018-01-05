@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单一按钮显示/隐藏</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        #head{
+            cursor: pointer;
+            border: 1px black solid;
+            margin: 5px auto;
+            padding: 0 10px;
+            width: 200px;
+            height: 30px;
+            font-size: 15px;
+            background: lightgray url("pj2.gif") 180px 15px no-repeat;
+            line-height: 30px;
+            font-weight: 400;
+        }
+        #head.open{
+            background-position: 180px -12px;
+            border-bottom: none;
+        }
+        #cont{
+            border: solid black 1px;
+            border-top: none;
+            width: 220px;
+            margin: -5px auto;
+        }
+        #cont li a{
+            display: block;
+            padding: 5px 10px;
+            background:#e9edf2;
+            color: #666666;
+            text-decoration: none;
+        }
+        #cont li a:hover{
+            background: snow;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oul = document.getElementById('cont');
+            var ohed = document.getElementById('head');
+            ohed.onclick = function () {
+                if(ohed.className == ''){
+                    ohed.className = 'open';
+                    oul.style.display = 'block';
+                }
+                else if(ohed.className == 'open'){
+                    ohed.className = '';
+                    oul.style.display = 'none';
+                }
+                /*此处可以用？语法来实现，可以少敲几行代码*/
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="head" class="">播放列表...</div>
+        <div id="cont" style="display: none;">
+            <ul>
+                <li><a href="">玩家之徒 - 蔡依林</a></li>
+                <li><a href="">原谅我就是这样的女生 - 戴佩妮</a></li>
+                <li><a href="">猜不透 - 丁当</a></li>
+                <li><a href="">自导自演 - 周杰伦</a></li>
+                <li><a href="">浪漫窝 - 弦子</a></li>
+                <li><a href="">流年 - 王菲</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

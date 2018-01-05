@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            margin: 5px auto;
+            width: 320px;
+            border: lightgray 5px solid;
+            border-radius: 10px;o
+        }
+        #head{
+            background: lightslategrey;
+            text-align: right;
+        }
+        #head span{
+            color: snow;
+            margin-right: 15px;
+        }
+        #io{
+            background: url("img/inputBg.jpg");
+            text-align: right;
+            overflow: hidden;
+            padding:0 10px 0 10px;
+        }
+        #d1{
+            height: 15px;
+            line-height: 15px;
+            font-size: 15px;
+            padding-right: 15px;
+        }
+        #d2{
+            font-size: 45px;
+            height: 45px;
+            line-height: 45px;
+            padding-bottom: 15px;
+            padding-right: 15px;
+        }
+        #inp{
+            background:url("img/bg.jpg");
+        }
+        #inp li{
+            list-style: none;
+        }
+        #inp a{
+            color: snow;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        #inp li.ss a{
+            background: url("img/btn.png") no-repeat;
+            background-position: 0 0;
+            list-style: none;
+            font-size: 30px;
+            float: left;
+            width: 63px;
+            height: 41px;
+            margin: 17px 10px 0 0;
+        }
+        #inp li.ss a:hover{
+            background: url("img/btn.png") no-repeat;
+            background-position: -63px 0;
+        }
+        #left{
+            float: left;
+            padding:0 0 17px 17px;
+            width: 223px;
+        }
+        #right{
+            float: left;
+            width: 80px;
+
+        }
+        #be {
+            list-style: none;
+            font-size: 30px;
+            float: left;
+            width: 63px;
+            margin: 17px 10px 0 0;
+            height: 99px;
+            line-height: 99px;
+        }
+        #be a{
+            background: url("img/btn.png") no-repeat;
+            background-position: 0 -165px;
+        }
+        #be a:hover{
+            background: url("img/btn.png") no-repeat;
+            background-position: -63px -165px;
+        }
+        #b0{
+            list-style: none;
+            font-size: 30px;
+            float: left;
+            width: 140px;
+            margin: 17px 10px 0 0;
+            height: 41px;
+            line-height: 41px;
+        }
+        #b0 a{
+            background: url("img/btn.png") no-repeat;
+            background-position: 0 -82px;
+        }
+        #b0 a:hover{
+            background: url("img/btn.png") no-repeat;
+            background-position: 0px -121px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var od1 = document.getElementById('d1');
+            var od2 = document.getElementById('d2');
+            var oor = document.getElementsByClassName('or');
+            var obe = document.getElementById('be');
+            var ol = document.getElementsByTagName('li')
+            for(var i = 0;i<oor.length;i++){
+                oor[i].index = i
+                oor[i].onclick = function () {
+                    if(od2.className=='done'){
+                        if(!isNaN(this.innerText))
+                        {
+                            od2.innerText = ''
+                            od2.className = ''}
+                        else
+                        {
+                        od1.innerText = od2.innerText
+                        od2.innerText = ''
+                        od2.className = ''
+                        }
+                    }
+                    if(od2.innerText == 0){od2.innerText = ''}
+                    if(!isNaN(this.innerText) &&!isNaN(od2.innerText)){
+                        od2.innerText += this.innerText
+                        od2.innerText = parseFloat(od2.innerText)
+                    }
+                    else if(this.innerText=='.' &&!isNaN(od2.innerText)){
+                        od2.innerText += this.innerText
+
+                    }
+                    else if(this.innerText=='%' &&!isNaN(od2.innerText)){
+                        od2.innerText = od2.innerText/100
+
+                    }
+                    else if(this.innerText=='x' &&!isNaN(od2.innerText)){
+                        od1.innerText += od2.innerText
+                        od2.innerText = '*'
+
+                    }
+                    else if(isNaN(this.innerText)&&!isNaN(od2.innerText)){
+                        od1.innerText += od2.innerText
+                        od2.innerText = this.innerText
+                    }
+                    else if(isNaN(this.innerText)&&isNaN(od2.innerText)){
+                        alert('wrong')
+                        od1.innerText = ''
+                        od2.innerText = 0
+                    }
+                    else if(!isNaN(this.innerText)&&isNaN(od2.innerText)){
+                        od1.innerText += od2.innerText
+                        od2.innerText = this.innerText
+                    }
+
+                }
+                
+            }
+            obe.onclick = function () {
+                od1.innerText += od2.innerText
+                od2.innerText = eval(od1.innerText)
+                od1.innerText = ''
+                od2.className = 'done'
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="main">
+    <div id="head"><span>By-Franklll</span></div>
+    <div id="io">
+        <div id="d1"></div>
+        <div id="d2">0</div>
+    </div>
+    <div id="inp">
+            <div id="left">
+            <ul>
+                <li class="or ss"><a href="javascript:;">C</a></li>
+                <li class="or ss comp"><a href="javascript:;">%</a></li>
+                <li class="or ss comp"><a href="javascript:;">/</a></li>
+                <li class="or ss "><a href="javascript:;">7</a></li>
+                <li class="or ss "><a href="javascript:;">8</a></li>
+                <li class="or ss"><a href="javascript:;">9</a></li>
+                <li class="or ss"><a href="javascript:;">4</a></li>
+                <li class="or ss"><a href="javascript:;">5</a></li>
+                <li class="or ss"><a href="javascript:;">6</a></li>
+                <li class="or ss"><a href="javascript:;">1</a></li>
+                <li class="or ss"><a href="javascript:;">2</a></li>
+                <li class="or ss"><a href="javascript:;">3</a></li>
+                <li class="or" id="b0"><a href="javascript:;">0</a></li>
+                <li class="or ss"><a href="javascript:;">.</a></li>
+            </ul>
+            </div>
+            <div id="right">
+            <ul>
+                <li class="or ss comp"><a href="javascript:;">x</a></li>
+                <li class="or ss comp"><a href="javascript:;">-</a></li>
+                <li class="or ss comp"><a href="javascript:;">+</a></li>
+                <li id="be"><a href="javascript:;">=</a></li>
+            </ul>
+            </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+</body>
+</html>

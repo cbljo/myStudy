@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #p1{
+            width: 80%;
+            margin: 5px auto;
+            background: lightgray;
+            border: solid grey 1px;
+            text-align: center;
+        }
+        #p1_1{
+            width: 80%;
+            margin: 5px auto;
+            background: lightgreen;
+            border: solid grey 1px;
+        }
+        #p2{
+            padding: 5px 0 5px 0;
+            font-size: 16px;
+            width: 80%;
+            margin: 5px auto;
+            background: lightblue;
+            border: solid grey 1px;
+            text-align: center;
+            line-height: 16px;
+        }
+        #p2 input{
+            width: 50px;
+        }
+        #p3{
+            padding: 5px 0 5px 0;
+            font-size: 16px;
+            width: 80%;
+            margin: 5px auto;
+            background: lightpink;
+            border: solid grey 1px;
+            text-align: center;
+            line-height: 16px;
+        }
+        #p3 input{
+            font-size: 20px;
+            width: 50px;
+        }
+        #p4{
+            padding: 5px 0 5px 0;
+            font-size: 16px;
+            width: 80%;
+            margin: 5px auto;
+            background: lightcyan;
+            border: solid grey 1px;
+            text-align: center;
+            line-height: 16px;
+        }
+        #p4 input{
+            width: 80px;
+        }
+        #p5{
+            padding: 5px 0 5px 0;
+            font-size: 16px;
+            width: 80%;
+            margin: 5px auto;
+            background: lightsalmon;
+            border: solid grey 1px;
+            text-align: center;
+            line-height: 16px;
+        }
+        #p6{
+            padding: 5px 0 5px 0;
+            font-size: 16px;
+            width: 80%;
+            margin: 5px auto;
+            background: lightcyan;
+            border: solid grey 1px;
+            text-align: center;
+            line-height: 16px;
+        }
+        #p6 input{
+            padding: 5px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var p1 = document.getElementById('p1')
+            p1.innerHTML = typeof 123456 + '<br>' +typeof 'abc' + '<br>' + typeof document
+            var p2 = document.getElementById('p2')
+            var op2 = p2.getElementsByTagName('input')
+            op2[2].onclick = function () {
+                var temp = parseInt(op2[0].value) + parseInt(op2[1].value)
+                var opp2 = p2.getElementsByTagName('span')[0]
+                opp2.innerHTML = temp
+            }
+            var p3 = document.getElementById('p3').getElementsByTagName('input')[0]
+            p3.onclick = function () {
+                p3.value = parseInt(p3.value)+1
+            }
+            var p4 = document.getElementById('p4')
+            var op4 = p4.getElementsByTagName('input')
+            op4[2].onclick = function () {
+                var temp = parseInt(op4[0].value) > parseInt(op4[1].value)?parseInt(op4[0].value):parseInt(op4[1].value)
+                var opp4 = p4.getElementsByTagName('span')[0]
+                opp4.innerHTML = temp
+            }
+            var p5 =document.getElementById('p5').getElementsByTagName('span')[0]
+            var p5v = 0
+            function p5add() {
+                p5v+=1
+                p5.innerHTML = p5v
+            }
+            setInterval(p5add,1000)
+            var p6 = document.getElementById('p6')
+            var op6 = p6.getElementsByTagName('input')
+            op6[1].onclick = function () {
+                var temp = op6[0].value.length
+                var opp6 = p6.getElementsByTagName('span')[0]
+                if(!isNaN(op6[0].value))
+                {opp6.innerHTML = temp==2?'对的，这是二位数':'不对，这是'+temp+'位数'}
+                else {
+                    alert('请输入数字')
+                }
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="p1">
+
+</div>
+<div id="p1_1">
+<pre>
+&lt;script type="text/javascript"&gt;
+    alert(typeof 12345);	<span>//输出number</span>
+    alert(typeof "abc");	<span>//输出string</span>
+    alert(typeof document);	<span>//输出object</span>
+&lt;/script&gt;
+</pre>
+</div>
+<div id="p2">
+    <pre><input type="text"> + <input type="text"> = <span>?</span>  <input type="button" value="求和"></pre>
+</div>
+<div id="p3">
+    <input type="button" value="0">
+</div>
+<div id="p4">
+    <pre><input type="text"> VS <input type="text"> 最大的数是 <span>?</span>  <input type="button" value="比较一下"></pre>
+</div>
+<div id="p5">
+    <span>0</span>
+</div>
+<div id="p6">
+    <pre><input type="text"> <input type="button" value="这是两位数吗"> <span></span></pre>
+</div>
+
+</body>
+</html>

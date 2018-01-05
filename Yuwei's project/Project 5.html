@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框全选/反选</title>
+    <style>
+        #main{
+            width: 150px;
+            border: solid black 1px;
+            border-radius: 5px;
+            margin: 5px auto;
+            text-align: center;
+            padding: 10px;
+        }
+        #main a{
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        #main a:hover{
+            color: orangered;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oa = document.getElementsByTagName('input');
+            var ol = document.getElementsByTagName('lable')[0];
+            var or = document.getElementsByTagName('a')[0];
+            function is_checked() {
+                for(var i = 1,n = 0;i<oa.length;i++){
+                    oa[i].checked && n++
+                }
+                oa[0].checked = n == oa.length - 1;
+                ol.innerHTML = oa[0].checked?'全选':'全不选'
+            }
+
+            oa[0].onclick =function () {
+                for(var i =1;i<oa.length;i++){
+                    oa[i].checked = this.checked
+                }
+                is_checked()
+
+            };
+
+            or.onclick = function () {
+                for(var i = 1;i<oa.length;i++){
+                    oa[i].checked != oa[i].checked
+                }
+                is_checked()
+            };
+            for(var i = 1 ;i<oa.length;i++){
+                oa[i].onclick = function () {
+                    is_checked()
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="main">
+    <input type="checkbox"> <lable>全选</lable> &nbsp;&nbsp;&nbsp;<a href="javascript:" >反选</a><br>
+    <hr><br>
+    <form action="">
+        <input type="checkbox" name="c">选项1 <br>
+        <br>
+        <input type="checkbox" name="c">选项2 <br>
+        <br>
+        <input type="checkbox" name="c">选项3 <br>
+        <br>
+        <input type="checkbox" name="c">选项4 <br>
+        <br>
+        <input type="checkbox" name="c">选项5 <br>
+        <br>
+        <input type="checkbox" name="c">选项6 <br>
+        <br>
+        <input type="checkbox" name="c">选项7 <br>
+        <br>
+        <input type="checkbox" name="c">选项8 <br>
+    </form>
+</div>
+
+
+</body>
+</html>

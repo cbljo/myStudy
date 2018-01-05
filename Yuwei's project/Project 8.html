@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页时钟及倒计时</title>
+    <style>
+        #clock{
+            margin: 5px auto;
+            text-align: center;
+            width: 300px;
+            padding: 20px 20px;
+            background: black;
+            color: snow;
+        }
+        #clock span{
+            background: snow;
+            border: solid lightgray 2px;
+            color: black;
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+        #count{
+            margin: 20px auto;
+            text-align: center;
+            width: 300px;
+            padding: 20px 20px;
+            background: black;
+            color: snow;
+        }
+        #count span{
+            background: snow;
+            border: solid lightgray 2px;
+            color: black;
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+        #count div{
+            background: url("img/btn-1.png");
+            margin: 20px auto;
+            margin-bottom: 5px;
+            width: 283px;
+            height: 50px;
+            cursor: pointer;
+            display: block;
+        }
+        #count div.active{
+            background-position: 0px -50px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var ot = document.getElementById('clock').getElementsByTagName('span')
+            function checkt() {
+                var ct = new Date()
+                function checkl(a) {
+                    b = a + 'a'
+                    if(b.length == 2){
+                        return '0'+a
+                    }
+                    else{
+                        return a
+                    }
+                }
+                checkl(ct.getHours())
+                ot[0].innerText =checkl(ct.getHours())
+                ot[1].innerText = checkl(ct.getMinutes())
+                ot[2].innerText = checkl(ct.getSeconds())
+            }
+            checkt()
+            setInterval(checkt,1000)
+            var oc = document.getElementById('count');
+            var ort = oc.getElementsByTagName('span');
+            var ob = oc.getElementsByTagName('div')[0];
+            var cs = 0;
+            var cn = 100;
+            ob.onclick = function () {
+                ob.className = ob.className == ''?'active':''
+                if(cs == 0){
+                    cs = 1;
+                    function ctt() {
+                        cn -=1
+                        if(cn>=60){
+                            ort[1].innerText = cn-60
+                        }
+                        else if(cn>=0){
+                            ort[0].innerText = '00'
+                            ort[1].innerText = cn
+                        }
+                        else {
+                            alert('times out')
+                            clearInterval(i)
+                        }
+                    }
+                    i = setInterval(ctt,1000)
+                }
+                else if(cs == 1){
+                    cs = 0
+                    clearInterval(i)
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="clock"><span></span>点<span></span>分<span></span>秒</div>
+<div id="count">
+    <span>01</span>分<span>40</span>秒
+    <div class="">
+    </div>
+</div>
+</body>
+</html>

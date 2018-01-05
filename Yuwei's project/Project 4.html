@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动变换图片路径</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+        }
+        #main{
+            margin: 10px auto;
+            padding: 10px;
+            padding-top: 13px;
+            width: 210px;
+            border-radius: 10px;
+            border: solid black 1px;
+            background: snow;
+        }
+        #g{
+            margin: -3px 1px 1px 1px;
+            float: left;
+        }
+        .k{
+            float: left;
+            margin: -3px 1px 1px 1px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var ok = document.getElementsByClassName('k')
+            var og = document.getElementById('big')
+            for(i = 0;i<ok.length;i++){
+                ok[i].index = i;
+                ok[i].onmouseover = function () {
+                    og.src = 'img/big_'+(this.index+1)+".jpg"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="main">
+    <div id="g"><img src="img/big_1.jpg" alt="" id="big"></div>
+    <div class="k"><img src="img/small_1.jpg" alt=""></div>
+    <div class="k"><img src="img/small_2.jpg" alt=""></div>
+    <div class="k"><img src="img/small_3.jpg" alt=""></div>
+    <div class="k"><img src="img/small_4.jpg" alt=""></div>
+    <div class="k"><img src="img/small_5.jpg" alt=""></div>
+    <div class="k"><img src="img/small_6.jpg" alt=""></div>
+    <div class="k"><img src="img/small_7.jpg" alt=""></div>
+    <div class="k"><img src="img/small_8.jpg" alt=""></div>
+    <div class="k"><img src="img/small_9.jpg" alt=""></div>
+    <div class="k"><img src="img/small_10.jpg" alt=""></div>
+    <div class="k"><img src="img/small_11.jpg" alt=""></div>
+    <div style="clear: both"></div>
+</div>
+
+</body>
+</html>
