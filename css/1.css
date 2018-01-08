@@ -1,0 +1,29 @@
+body{
+    font-family: "Kaiti SC";
+    font-size: 16px;
+}
+#main{
+    margin: 80px 80px 10px 80px;
+    background: #ddd;
+    color: #444;
+    padding:30px 0;
+    border-radius: 20px;
+}
+h1{
+    line-height: 1.5;
+    font-size: 400%;
+}
+h3{
+    font-size: 200%;
+}
+#imgBox{
+    padding-top: 20px;
+    background: snow;
+    width: 80%;
+    border-radius: 15px;
+}
+#imgBox img{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    filter: grayscale(80%);
+}
