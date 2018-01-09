@@ -1,0 +1,88 @@
+body{
+    font-size: 12px;
+    background: #aaa;
+    min-width: 1200px;
+}
+#head{
+    background: #5588aa;
+    min-width: 1000px;
+    min-height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    height: 14vh;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 5px 8px #333;
+
+}
+#logo{
+    margin: 0 0;
+}
+#logoImg{
+    height: 10vh;
+}
+#head li{
+    margin: 1vw;
+    display: inline-block;
+    list-style: none;
+
+}
+#head li a{
+    width: 6em;
+    font-size: 125%;
+    line-height: 1.8;
+    text-align: center;
+    display: inline-block;
+    color: #999999;
+    border: #5588aa 1px solid;
+    border-radius: 10px;
+}
+#head li a:hover{
+    border: #558899 1px solid;
+    box-shadow: #558877 0 1px;
+    text-decoration: none;
+}
+.navChecked{
+    background: snow;
+    border: snow 1px solid;
+}
+#main{
+    background: snow;
+    margin-top: 14vh;
+    width: 80%;
+}
+#me{
+    width: 100%;
+    background: #777;
+    padding: 50px;
+}
+#whoAmI{
+    font-size: 150%;
+    color: snow;
+}
+#hr1{
+    width: 80%;
+}
+#photo img{
+    width: 100%;
+    border-radius: 50%;
+}
+#projects{
+    padding: 50px;
+    font-size: 150%;
+    color: #333333;
+    border-top: #424242 solid 2px;
+    border-bottom:  #424242 solid 2px;
+}
+#pj{
+    padding-top:20px;
+}
+#pj img{
+    width: 45%;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: #333333 3px 3px 5px;
+}
