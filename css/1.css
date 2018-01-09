@@ -1,5 +1,5 @@
 body{
-    font-family: "Kaiti SC";
+    font-family: "楷体";
     font-size: 16px;
 }
 #main{
@@ -19,11 +19,37 @@ h3{
 #imgBox{
     padding-top: 20px;
     background: snow;
-    width: 80%;
+    width: 90%;
     border-radius: 15px;
+    padding-bottom: 20px;
 }
 #imgBox img{
     border-radius: 10px;
     margin-bottom: 10px;
     filter: grayscale(80%);
+}
+#cont{
+    width: 60%;
+    padding-top: 20px;
+}
+#cont li{
+    padding-top: 10px;
+}
+#cont h3{
+    font-size: 150%;
+}
+#cont h4{
+    font-size: 100%;
+}
+#cont p{
+    font-size: 75%;
+}
+#word{
+    padding: 20px;
+    background: #eaeaea;
+    border-radius:10px ;
+    box-shadow: #aaa 2px 2px;
+}
+#link{
+    margin-top: 30px;
 }
