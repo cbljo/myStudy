@@ -26,5 +26,33 @@ $(document).ready(function () {
             $('#a1').addClass('navChecked')
         }
     })
+    var inputBox = $('.inputBox');
+    var textBox = $('.textBox');
+    var textArea = $('#Areat');
+    for(var i=0;i<4;i++){
+        inputBox[i].index=i
+        inputBox[i].onfocus=function () {
+            textBox.addClass('textBox');
+            textBox.removeClass('textBoxShift');
+            textBox[this.index].classList.add('textBoxShift')
+        }
+        inputBox[i].onblur=function () {
+            textBox.addClass('textBox');
+            textBox.removeClass('textBoxShift');
+        }
+    }
+    document.getElementById('Areat').onfocus = function(){
+        for(var i=0;i<3;i++){
+            textBox.addClass('textBox');
+            textBox.removeClass('textBoxShift');
+            textBox[3].classList.add('textBoxShift')
+            }
+    }
+    document.getElementById('Areat').onblur = function(){
+        for(var i=0;i<4;i++){
+            textBox.addClass('textBox');
+            textBox.removeClass('textBoxShift');
+        }
+    }
 
 })

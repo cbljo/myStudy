@@ -167,3 +167,27 @@ p:before{
 #copy{
     background: #235e99;
 }
+.textBoxShift{
+    animation: myMove2 300ms linear;
+    position: absolute;
+    transform: translate(-6px,-30px);
+    color: purple;
+    font-size: 100%;
+    padding-left: 30px;
+}
+@keyframes myMove2 {
+    from{
+        position: absolute;
+        color: #999999;
+        font-size: 200%;
+        padding-left: 30px;
+        transform: translate(-6px,4px);
+    }
+    to{
+        position: absolute;
+        transform: translate(-6px,-30px);
+        color: purple;
+        font-size: 100%;
+        padding-left: 30px;
+    }
+}
