@@ -1,0 +1,26 @@
+body{
+    font-size: 16px;
+    font-family: 楷体;
+}
+#main{
+    margin:40px 6%;
+    width: 88%;
+    height: 400px;
+    border: #999 solid 1px;
+    border-radius: 20px;
+}
+#control input{
+    margin-bottom: 10px;
+    width: 500px;
+    border: #ccc solid 1px;
+    border-radius: 20px;
+    line-height: 1.5;
+    font-size: 150%;
+    padding-left: 10px;
+}
+#control li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    transform: translate(-35px,0);
+}
