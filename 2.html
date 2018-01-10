@@ -14,6 +14,7 @@
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <!-- CSS样式 -->
     <link rel="stylesheet" href="css/2.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
 </head>
 <body>
 <div id="anchor"></div>
@@ -30,16 +31,18 @@
 <div id="main" class="center-block">
     <div id="me" class="row center-block">
         <div id="whoAmI" class="col-xs-7">
-            <p>Offshore Engineer and Front-End Developer with practical experience in ship design and project management, branding strategy, and creative direction; devoted to parametric ship design and functional programming.</p>
-            <hr id="hr1">
-            <h3>Ship Designer - Web Developer - User Experience Designer</h3>
+            <p>船舶与海洋工程师 and 编程爱好者，正在学习前端开发， 在船舶设计和项目管理方面具有一定的经验。思维比较跳脱，希望通过学习能够在计算机科学方面有所收获。</p>
+            <br>
+            <hr style="width: 80%">
+            <br>
+            <h3 class="text-center">船舶设计师 - 前端学习者(Not so good yet)</h3>
         </div>
         <div id="photo" class="col-xs-5">
             <img src="src/img/2/chuan.jpg">
         </div>
     </div>
     <div id="projects">
-        <h2 class="text-center">My Projects</h2>
+        <h2 class="text-center headline">我的项目</h2>
         <hr style="width: 80%;">
         <div class="row" id="pj">
             <img src="src/img/2/pj1.png" alt="" class="col-xs-6">
@@ -47,9 +50,54 @@
         </div>
     </div>
     <div id="contact">
-
+        <h2 class="text-center headline">联系我</h2>
+        <hr style="width: 80%;">
+        <div class="row">
+            <div class="col-xs-6">
+                <ul>
+                    <li class="listBox"><h4 class="textBox" onselectstart="return false;">姓名</h4><input type="text" style="border-style:none" class="inputBox">
+                        <hr></li>
+                    <li class="listBox"><h4 class="textBox" onselectstart="return false;">邮箱</h4><input type="text" style="border-style:none" class="inputBox">
+                        <hr></li>
+                    <li class="listBox"><h4 class="textBox" onselectstart="return false;">电话</h4><input type="text" style="border-style:none" class="inputBox">
+                        <hr></li>
+                    <li class="listBox"><h4 class="textBox" onselectstart="return false;">给我留言</h4><textarea name="textArea" id="Areat"></textarea>
+                        <input type="text" style="border-style:none" class="inputBox">
+                        <hr></li>
+                </ul>
+                <input type="button" class="btn btn-primary" value="联系我" style="margin-left:40px;margin-bottom: 30px ">
+            </div>
+            <div class="col-xs-6">
+                <p>想要跟我联系？ 如果您想要了解更多关于我的信息，或者有问题想要跟我探讨，或者单纯想跟我吹比，请在左边输入您的联系方式和您的需求，我会尽快跟您联系。谢谢。</p>
+                <br>
+                <p>I promise to reply A.S.A.P.</p>
+            </div>
+        </div>
     </div>
 </div>
-<div id="foot"></div>
+<div id="foot">
+    <div id="info" style="background: #558877">
+        <div class="row" style="margin-top: -2px;padding-top: 20px">
+            <div class="col-xs-6 text-center">
+                <h3>关于此页面</h3>
+                <br>
+                <br>
+                <h4>此页面是Franklll的练习作品 </h4>
+                <h4>Just for fun <i class="fa fa-gamepad"></i></h4>
+            </div>
+            <div class="col-xs-6 text-center">
+                <h3>我的一些信息</h3>
+                <br>
+                <br>
+                <ul>
+                    <li class="roundBox"><l class="fa fa-github fa-2x"></l></li>
+                    <li class="roundBox"><l class="fa fa-linkedin fa-2x"></l></li>
+                    <li class="roundBox"><l class="fa fa-heart fa-2x"></l></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="copy"><p class="text-center">Franklll © 2018.</p></div>
+</div>
 </body>
 </html>

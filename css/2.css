@@ -1,7 +1,10 @@
 body{
     font-size: 12px;
     background: #aaa;
-    min-width: 1200px;
+    min-width: 1000px;
+    color: black;}
+p:before{
+    content: "\00A0\00A0\00A0\00A0";
 }
 #head{
     background: #5588aa;
@@ -85,4 +88,82 @@ body{
     margin-left: 20px;
     border-radius: 20px;
     box-shadow: #333333 3px 3px 5px;
+}
+#contact{
+    margin: 0 10%;
+}
+#contact p{
+    font-size: 200%;
+    margin-top: 40px;
+    color: #666666;
+}
+.headline{
+    font-size: 30px;
+    color: #666666;
+}
+.listBox{
+    list-style: none;
+    margin: 40px 0;
+}
+.inputBox{
+    font-size: 30px;
+    width: 100%;
+    line-height: 1.5;
+    background: snow;
+    color: #999999;
+}
+.textBox{
+    position: absolute;
+    color: #999999;
+    font-size: 200%;
+    padding-left: 30px;
+    transform: translate(-6px,4px);
+}
+#Areat{
+    font-size: 20px;
+    width: 100%;
+    line-height: 1.5;
+    height: 150px;
+    background: snow;
+    resize: none;
+    border: none;
+}
+#foot{
+    width: 100%;
+    margin: 0;
+    color: snow;
+    min-width: 1000px;
+}
+.roundBox{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: snow 2px solid;
+    border-radius:50% ;
+    margin-left: 10px;
+    transform: translate(-25px,0);
+}
+.roundBox:hover{
+    animation: myMove 1s linear;
+    color: purple;
+    background: snow;
+    border: purple 2px solid;
+
+}
+@keyframes myMove {
+    from{
+        color: snow;
+        border: snow 2px solid;
+    }
+    to{
+        color: purple;
+        background: snow;
+        border: purple 2px solid;
+    }
+}
+#copy{
+    background: #235e99;
 }
