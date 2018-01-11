@@ -24,3 +24,14 @@ body{
     margin-left: 30px;
     transform: translate(-35px,0);
 }
+@keyframes trans {
+    from{
+        transform: translate(1000px,0px);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+.transClass{
+    animation: trans 2s linear;
+}
