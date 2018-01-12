@@ -18,7 +18,11 @@ $(document).ready(function () {
     launchDanmu = function () {
         var randomIndex = Math.floor(Math.random()*danmuArray.length);
         var newDiv = document.createElement('div');
-        newDiv.setAttribute('class','transClass')
+        var randomColor=function () {
+            return Math.floor(Math.random()*255);
+        }
+        newDiv.style.color='rgb('+randomColor()+','+randomColor()+','+randomColor()+')';
+        newDiv.setAttribute('class','transClass');
         newDiv.innerText = danmuArray[randomIndex];
         main.appendChild(newDiv);
     };
