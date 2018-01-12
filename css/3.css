@@ -26,7 +26,7 @@ body{
 }
 @keyframes trans {
     from{
-        transform: translate(1000px,0px);
+        transform: translate(2100px,0px);
     }
     to{
         transform: translate(0px,0px);
