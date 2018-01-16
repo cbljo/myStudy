@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function findLongestWord(str) {
+            // 请把你的代码写在这里
+            arr = str.split(' ')
+            str = '';
+            for (var i in arr){
+                if(i.length > str.length){
+                    str = i;
+                    alert(str)
+                }
+            }
+            return arr;
+        }
+        function titleCase(str) {
+            // 请把你的代码写在这里
+            arr = str.split(' ')
+            for(var i=0;i<arr.length;i++){
+                var temp = arr[i].split('');
+                temp[0]= temp[0].toUpperCase();
+                arr[i]=temp.join('')
+            }
+            str = arr.join(' ')
+            return arr;
+        }
+        function confirmEnding(str, target) {
+            // 请把你的代码写在这里
+            var step = target.split('');
+            step = step.length;
+            if(str.substr(-1,step)==target){
+                return target + ' and '+str +step;
+            }
+            else{
+                return target + ' and ' +str.substr(str.length-step,step) + step;
+            }
+        }
+        function rot13(a) { // LBH QVQ VG!
+            // 请把你的代码写在这里
+            //a = str.replace(/^A-Za-z\s+/g,'');
+            a = a.toUpperCase();
+            a = a.split('')
+            for(var i=0;i<a.length;i++){
+                var b = a[i].charCodeAt(0);
+                if(65<=b&&b < 78){
+                    b = b + 13
+                }
+                else if(78<=b&&b<91){
+                    b = b -13;
+                }
+                else{
+                    b = b
+                }
+                a[i] = String.fromCharCode(b)
+            }
+            a = a.join('')
+            return a;
+
+        }
+
+
+        document.write(rot13('abcdefghijklmnopqrstuvwxyz'));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
