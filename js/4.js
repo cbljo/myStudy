@@ -8,9 +8,16 @@ $(document).ready(function () {
         body.css('color',cor);
         body.css('background',cor )
         $('.btn').css('background',cor)
-        $.getJSON("/json/4.json",function (json) {
-            $('#sent').html('a')
+        $.getJSON("json/4.json",function (json) {
+            var a = [];
+            for (var key in json){
+                a.push(key)
+            }
+            var randnum = Math.floor(Math.random()*a.length)
+            $('#sent').text(json[a[randnum]])
+            $('#aut').text(a[randnum])
         })
 
     })
+
 });
