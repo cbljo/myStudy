@@ -6,6 +6,7 @@ body{
 #head{
     margin: 0 auto;
     padding: 5px 20px;
+    min-width: 1200px;
 }
 #head h2{
     color: #666666;
