@@ -26,7 +26,6 @@ body{
 #main{
     width: 1200px;
     height: 470px;
-    background: #2aabd2;
 }
 #inp{
     text-align: right;
@@ -49,4 +48,10 @@ body{
     height: 40px;
     color: snow;
     transform: translate(0,-2px);
+}
+li{
+    list-style: none;
+    margin: 40px;
+    font-size: 150%;
+    font-family: "Xingkai SC";
 }
