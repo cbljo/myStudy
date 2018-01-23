@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            function telephoneCheck(str) {
+                // 祝你好运
+                var regu =RegExp(/^[1]?[0-9]{3}[-]?[0-9]{3}[-]?[0-9]{4}$/);
+                //var regu2 = RegExp(/^[1][0-9]{10}$/);
+                var regu2 = RegExp(/^[1]?[(][0-9]{3}[)][0-9]{7}$/)
+                //var regu3 = RegExp(/^[1][(][0-9]{3}[)][0-9]{7}$/)
+                var regu3 = false
+                if(regu.test(str)|| regu2.test(str))
+                return true;
+            }
+            function sym() {
+                var a = [];
+                for (var i=0;i<arguments.length;i++){
+                    a.push(arguments[i])
+                }
+                var flatten = a.reduce(function (a,b) {
+                    var c = a.concat(b);
+                    var d =[];
+                    for(j=0;j<c.length;j++){
+                        if((a.indexOf(c[j])!=-1&&b.indexOf(c[j])==-1)||(b.indexOf(c[j])!=-1&&a.indexOf(c[j])==-1)){
+                            d.push(c[j])
+                        }
+                    }
+                    return d
+                });
+                return flatten
+            }
+            function checkCashRegister(price, cash, cid) {
+                a=[];
+                function check(cash,arr,cid) {
+                    for(i =0;i<arr.length;i++){
+                        if(parseInt(cash/arr[i])){
+                            cid[8-i][1]=parseInt(cash/arr[i])*arr[i]+cid[8-i][1];
+                            cash=cash-parseInt(cash/arr[i])*arr[i]
+                        }
+                    }
+                }
+                function charge(price,cash,cid,arr) {
+                    var charge = cash-price;
+                    for(i =1;i<arr.length;i++){
+                        if(parseInt(charge/arr[i])){
+                            cid[8-i][1]-=parseInt(charge/arr[i])*arr[i];
+                            charge=charge-parseInt(charge/arr[i])*arr[i];
+                            a.push(parseInt(charge/arr[i])*arr[i])
+                        }
+                    }
+
+                }
+                var arr = [100,20,10,5,1,0.25,0.1,0.05,0.01];
+                //var arr2 = ["PENNY","NICKEL", "DIME","QUARTER","ONE","FIVE", "TEN", "TWENTY","ONE HUNDRED"];
+                for(var i=0;i<cid.length;i++){
+                    if(cid[8-i][1]<0){
+                        return "Insufficient Funds"
+                    }
+                    if(cid[8-i][1]===0){
+                        return 'Closed'
+                    }
+                }
+                return a
+            }
+
+            function updateInventory(arr1, arr2) {
+                // 请保证你的代码考虑到所有情况
+                a=[];
+                for(var j=0;j<arr1.length;j++){
+                    a.push(arr1[j][1])
+                }
+                //return[a.indexOf(arr2[2][1])];
+                for(var i=0;i<arr2.length;i++){
+                    if(a.indexOf(arr2[i][1])!=-1){
+                        arr1[a.indexOf(arr2[i][1])][0]+=arr2[i][0]
+                    }
+                    else{
+                        arr1.push(arr2[i])
+                    }
+                }
+                return arr1;
+            }
+
+// 仓库库存示例
+            var curInv = [
+                [21, "Bowling Ball"],
+                [2, "Dirty Sock"],
+                [1, "Hair Pin"],
+                [5, "Microphone"]
+            ];
+
+            var newInv = [
+                [2, "Hair Pin"],
+                [3, "Half-Eaten Apple"],
+                [67, "Bowling Ball"],
+                [7, "Toothpaste"]
+            ];
+            function permAlone(str) {
+                function perm(arr) {
+                    var arr1 = [];
+                    (function fn(source, result) {
+                        if (source.length == 0)
+                            arr1.push(result);
+                        else
+                            for (var i = 0; i < source.length; i++)
+                                fn(source.slice(0, i).concat(source.slice(i + 1)), result.concat(source[i]));
+                    })(arr, []);
+                    return arr1
+                }
+                arr = str.split('');
+                arr1 = perm(arr);
+                arr2=[]
+                for(var i=0;i<arr1.length;i++){
+                    arr2.push(arr1[i].join(''))
+                }
+                count = 0;
+                var regu = RegExp(/(.)\1+/);
+                for(var j=0;j<arr2.length;j++){
+                    if(!regu.test(arr2[j])){
+                        count +=1;
+                    }
+                }
+                return count
+            }
+            //alert(permAlone('aab'));
+
+
+
+            //alert(permAlone('aab'));
+
+
+            //alert(checkCashRegister(19.50, 20.00, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.10], ["QUARTER", 4.25], ["ONE", 90.00], ["FIVE", 55.00], ["TEN", 20.00], ["TWENTY", 60.00], ["ONE HUNDRED", 100.00]]))
+
+            //alert(updateInventory(curInv, newInv)
+        function makeFriendlyDates(arr) {
+                arr1 = arr[0].split('-');
+                arr2 = arr[1].split('-');
+                arr3 = [];
+                mon = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
+                switch (arr1[2]){
+                    case 1:
+                    case 11:
+                    case 21:
+                    case 31:
+                        arr1[2] = parseInt(arr1[2])+'st';
+                        break;
+                    case 2:
+                    case 22:
+                    case 12:
+                        arr1[2] = parseInt(arr1[2])+'nd';
+                        break;
+                    case 3:
+                    case 13:
+                    case 23:
+                        arr1[2] = parseInt(arr1[2])+'rd';
+                        break;
+                    case arr1[2]>31:
+                        return undefined;
+                    default:
+                        arr1[2] = parseInt(arr1[2]) + 'th';
+                }
+                arr1[1] = mon[parseInt(arr1[1]-1)];
+            switch (arr2[2]){
+                case 1:
+                case 11:
+                case 21:
+                case 31:
+                    arr2[2] = parseInt(arr2[2])+'st';
+                    break;
+                case 2:
+                case 22:
+                case 12:
+                    arr2[2] = parseInt(arr2[2])+'nd';
+                    break;
+                case 3:
+                case 13:
+                case 23:
+                    arr2[2] = parseInt(arr2[2])+'rd';
+                    break;
+                case arr2[2]>31:
+                    return undefined;
+                default:
+                    arr2[2] = parseInt(arr2[2]) + 'th';
+            }
+            arr2[1] = mon[parseInt(arr2[1]-1)];
+            str1= arr1[2];
+            str2= arr2[2];
+            str1 = arr1[1] +' '+ str1
+            if(arr1[1]!=arr2[1]){
+                str2 = arr2[1] +''+ str2
+            }
+            str1 = str1 + ', ' + arr1[0]
+                return str1
+        }
+
+        //alert(makeFriendlyDates(['2017-01-02', '2017-01-05']));
+            var Person = function(firstAndLast) {
+                arr = firstAndLast.split(' ');
+                first=arr[0]
+                last = arr[1]
+                this.getFirstName = function(){
+                    return first
+                }
+                this.getLastName= function() {
+                    return last
+                }
+                this.getFullName = function() {
+                    return first+' '+last
+                }
+                this.setFirstName = function (a) {
+                    first = a
+                }
+                this.setLastName = function (a) {
+                    last = a
+                }
+                this.setFullName = function (a) {
+                    b=a.split(' ')
+                    first = b[0]
+                    last = b[1]
+                }
+                return firstAndLast;
+            };
+
+            var bob = new Person('Bob Ross');
+            //alert(bob.getFullName());
+            function orbitalPeriod(arr) {
+                var GM = 398600.4418;
+                var earthRadius = 6367.4447;
+                function cal(arr){
+                    var name = arr.name;
+                    var avg = arr.avgAlt;
+                    result = 2 * Math.PI*Math.sqrt(Math.pow(earthRadius+avg,3)/GM);
+                    out = {name:name,orbitalPeriod:result};
+                    return out
+                }
+                b=[]
+                for (var i=0;i<arr.length;i++){
+                    b.push(cal(arr[i]))
+                }
+                return b;
+            }
+
+            //alert(orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]));
+
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
