@@ -1,0 +1,66 @@
+body{
+    background: red;
+    font-size: 16px;
+}
+#head{
+    color: snow;
+    margin-top: 100px;
+    font-family: "Xingkai SC";
+}
+#control{
+    margin-top: 50px;
+    width: 500px;
+}
+#control h4{
+    color: yellowgreen;
+    font-family: "Yuanti SC";
+}
+#control ul{
+    transform: translate(-20px,-10px);
+}
+#control li{
+    display: inline-block;
+    list-style: none;
+}
+.click{
+    width: 20px;
+    height: 20px;
+    border: snow solid 1px;
+    line-height: 1.5;
+    font-size: 100%;
+    color: snow;
+    transform: translate(1px,0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.number{
+    font-size: 150%;
+    color: snow;
+    margin: 0 5px;
+    width: 50px;
+    cursor: default;
+}
+.click p{
+    transform: translate(0,-4px);
+}
+#main{
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+    border: snow solid 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: snow;
+}
+#na:hover{
+    background: #9d9d9d;
+    color: red;
+}
+#reset{
+    color: snow;
+    width: 100px;
+    height: 50px;
+    background: #2aabd2;
+    font-size: 150%;
+
+}

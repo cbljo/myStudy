@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <!--  -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../ku/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../ku/jquery-3.2.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../ku/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="8.css">
+    <script src="8.js"></script>
+</head>
+<body class="text-center">
+<h3 id="head">Franklll的番茄闹钟</h3>
+<div id="control" class="row center-block">
+    <div id="break" class="col-xs-6">
+        <h4>BREAKING LENGTH</h4><br>
+        <ul>
+            <li class="click text-center" id="bt1"><p onselectstart="return false;">-</p></li>
+            <li class="number" id="n1" onselectstart="return false;">5</li>
+            <li class="click text-center" id="bt2"><p onselectstart="return false;">+</p></li>
+        </ul>
+    </div>
+    <div id="session" class="col-xs-6">
+        <h4>SESSION LENGTH</h4><br>
+        <ul>
+            <li class="click" id="bt3"><p onselectstart="return false;">-</p></li>
+            <li class="number" id="n2" onselectstart="return false;">25</li>
+            <li class="click" id="bt4"><p onselectstart="return false;">+</p></li>
+        </ul>
+    </div>
+</div>
+<div id="main" class="center-block">
+    <h3 style="padding: 35px;cursor: pointer;display: block" id="start" onselectstart="return false;" id="na">SESSION</h3>
+    <h3 style="margin-top: -10px;padding-top: 20px;background: yellowgreen;cursor: default;overflow: hidden;height: 100px;" id="time" onselectstart="return false;">25:00</h3>
+</div>
+<br>
+<br>
+<br>
+<div><button id="reset" class="center-block text-center btn">重置</button></div>
+
+</body>
+</html>
