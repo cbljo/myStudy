@@ -1,6 +1,9 @@
 body{
     font-size: 16px;
     font-family: 楷体;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
 }
 #main{
     margin:40px 6%;
@@ -26,12 +29,14 @@ body{
 }
 @keyframes trans {
     from{
-        transform: translate(1000px,0px);
+        transform: translate(2100px,0px);
     }
     to{
         transform: translate(0px,0px);
+        margin-left: -300px;
     }
 }
 .transClass{
     animation: trans 2s linear;
+    margin-left: 30px;
 }

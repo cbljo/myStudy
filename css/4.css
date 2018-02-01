@@ -1,0 +1,39 @@
+body{
+    background: #2aabd2;
+    font-size: 16px;
+    color: #2aabd2;
+}
+#main{
+    background: snow;
+    width: 600px;
+    z-index: 9999;
+    padding: 50px;
+    margin-top: 150px;
+    border-radius: 20px;
+}
+#main button{
+    background: #2aabd2;
+    font-size: 120%;
+    line-height: 1.5;
+    color: snow;
+}
+.left{
+    margin-left: 20px;
+}
+.right{
+    margin-left:200px;
+}
+#sent:before{
+    content: '"';
+}
+#sent:after{
+    content: '"';
+}
+#sent{
+    font-size: 200%;
+}
+#aut{
+}
+a{
+    color: snow;
+}

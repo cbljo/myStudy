@@ -1,0 +1,57 @@
+body{
+    font-size: 16px;
+    color: black;
+    background: snow;
+}
+#head{
+    margin: 0 auto;
+    padding: 5px 20px;
+    min-width: 1200px;
+}
+#head h2{
+    color: #666666;
+    font-size: 300%;
+    font-family: "Xingkai SC";
+}
+#head a{
+    line-height:3;
+    color: #666666;
+    font-size: 200%;
+    font-family: Wingdings;
+    text-decoration: none;
+}
+#head a:hover{
+    color: #2aabd2;
+}
+#main{
+    width: 1200px;
+    height: 470px;
+}
+#inp{
+    text-align: right;
+    margin-right: 150px;
+    margin-bottom: 10px;
+}
+#inp input{
+    margin-right: 20px;
+    width: 300px;
+    font-size: 125%;
+    color: #9d9d9d;
+    line-height:2;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: #ccc 1px solid;
+}
+#inp button{
+    background: #2aabd2;
+    width: 80px;
+    height: 40px;
+    color: snow;
+    transform: translate(0,-2px);
+}
+li{
+    list-style: none;
+    margin: 40px;
+    font-size: 150%;
+    font-family: "Xingkai SC";
+}

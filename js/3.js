@@ -4,6 +4,7 @@ $(document).ready(function () {
     var del = document.getElementById('b2');
     var danmuArray = new Array();
     var main = document.getElementById('main');
+    var divN = $('.trasClass');
     danmuArray.push();
     submit.onclick = function(){
         var inputValue = document.getElementById('text').value;
@@ -12,15 +13,50 @@ $(document).ready(function () {
         }
         else{
             danmuArray.push(inputValue)
+            start()
         }
-        launchDanmu()
+
     };
     launchDanmu = function () {
         var randomIndex = Math.floor(Math.random()*danmuArray.length);
         var newDiv = document.createElement('div');
-        newDiv.setAttribute('class','transClass')
+        var randomColor=function () {
+            return Math.floor(Math.random()*255);
+        };
+        newDiv.style.color='rgb('+randomColor()+','+randomColor()+','+randomColor()+')';
+        newDiv.style.position = 'absolute';
+        //newDiv.style.marginRight = '-1700px';
+        newDiv.style.marginTop = Math.random()*380+'px';
+        //newDiv.style.transform = 'translate(0px,'+Math.random()*400+'px)';
+        newDiv.style.animation = 'trans '+(Math.random()*5+3)+'s linear';
+        newDiv.style.marginLeft = '-900px';
         newDiv.innerText = danmuArray[randomIndex];
+        newDiv.style.overflow = 'hidden';
         main.appendChild(newDiv);
+        //removeC = function () {
+           // main.removeChild(newDiv)
+        //}
+        //alert(newDiv.style.marginLeft)
+        //setTimeout(removeC(),10000)
+        //newDiv.setAttribute('class','transClass');
     };
+    /*checkDanmu = function () {
+        for(var i in main.children){
+            if(parseInt(i.style.marginLeft)<0){
+                main.removeChild(i)
+            }
+        }
 
-})
+    };*/
+    function start() {
+        time1 = setInterval('launchDanmu()',3000);
+        del.onclick = function(){
+            //window.clearInterval(time1)
+            //$('#main').empty()
+            window.location.reload()
+        }
+    }
+
+    //setTimeout(setInterval(setDanmu(),2000),2)
+
+});
