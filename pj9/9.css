@@ -1,0 +1,30 @@
+body{
+    background: lightblue;
+    font-size: 16px;
+}
+h3{
+    font-family: "Xingkai SC";
+    color: red;
+    margin-top: 100px;
+}
+h4{
+    font-family: "Xingkai SC";
+    color: red;
+}
+#main{
+    margin-top: 50px;
+}
+li{
+    display: inline-block;
+    list-style: none;
+}
+.block{
+    width: 150px;
+    height: 150px;
+    border: lightblue solid 2px;
+    background: snow;
+    margin: -3px;
+}
+ul{
+    margin-top: -15px;
+}
