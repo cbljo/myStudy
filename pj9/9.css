@@ -17,6 +17,7 @@ h4{
 li{
     display: inline-block;
     list-style: none;
+    margin: 0;
 }
 .block{
     width: 150px;
@@ -27,4 +28,22 @@ li{
 }
 ul{
     margin-top: -15px;
+}
+.cross:before{
+    content: "X";
+    transform: translate(-50%,35px);
+    position: absolute;
+    font-size: 300%;
+}
+.circle:before{
+    content: "O";
+    transform: translate(-50%,35px);
+    position: absolute;
+    font-size: 300%;
+}
+.pb{
+   cursor: pointer;
+}
+.pb:hover{
+    background: #9d9d9d;
 }
