@@ -7,7 +7,17 @@ $(document).ready(function () {
         num = Math.floor(Math.random()*4);
         arr2.push(num);
         color.eq(num).addClass('selected');
-        setTimeout(color.eq(num).removeClass('selected'),1000)
+        console.log(color.eq(num))
+        //setTimeout(color.eq(num).removeClass('selected'),1000)
+    }
+    function sleep(numberMillis) {
+        var now = new Date();
+        var exitTime = now.getTime() + numberMillis;
+        while (true) {
+            now = new Date();
+            if (now.getTime() > exitTime)
+                return;
+        }
     }
     var count = 2;
     var repeat = 5;
@@ -16,11 +26,15 @@ $(document).ready(function () {
             clearInterval(timer);
             console.log(arr2)
         } else {
+            for(var i=0;i<color.length;i++){
+                color.eq(i).removeClass('selected')
+            }
+
             repeat--;
-            randomPush();
+            setTimeout(randomPush(),1000);
             console.log(repeat)
         }
-    }, 3000);
+    }, 2e000);
     function check() {
         if(arr.length == arr2.length){
             alert(arr)
