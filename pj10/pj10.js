@@ -8,7 +8,6 @@ $(document).ready(function () {
         arr2.push(num);
         color.eq(num).addClass('selected');
         console.log(color.eq(num))
-        //setTimeout(color.eq(num).removeClass('selected'),1000)
     }
     function sleep(numberMillis) {
         var now = new Date();
@@ -19,8 +18,9 @@ $(document).ready(function () {
                 return;
         }
     }
-    var count = 2;
-    var repeat = 5;
+    var count = 1;
+    var repeat = 1;
+
     var timer = setInterval(function() {
         if (repeat == 0) {
             clearInterval(timer);
@@ -29,12 +29,11 @@ $(document).ready(function () {
             for(var i=0;i<color.length;i++){
                 color.eq(i).removeClass('selected')
             }
-
             repeat--;
             setTimeout(randomPush(),1000);
             console.log(repeat)
         }
-    }, 2e000);
+    }, 2000);
     function check() {
         if(arr.length == arr2.length){
             alert(arr)
