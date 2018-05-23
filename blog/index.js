@@ -19,6 +19,7 @@ app.set('view engine', 'ejs')
 
 // 设置静态文件目录
 app.use(express.static(path.join(__dirname, 'public')))
+
 // session 中间件
 app.use(session({
     name: config.session.key, // 设置 cookie 中保存 session id 的字段名称
@@ -32,6 +33,7 @@ app.use(session({
         url: config.mongodb// mongodb 地址
     })
 }))
+
 // flash 中间件，用来显示通知
 app.use(flash())
 
@@ -54,6 +56,7 @@ app.use(function (req, res, next) {
     res.locals.error = req.flash('error').toString()
     next()
 })
+
 // 正常请求的日志
 app.use(expressWinston.logger({
     transports: [
@@ -68,6 +71,7 @@ app.use(expressWinston.logger({
 }))
 // 路由
 routes(app)
+
 // 错误请求的日志
 app.use(expressWinston.errorLogger({
     transports: [
