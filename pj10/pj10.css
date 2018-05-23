@@ -1,0 +1,125 @@
+body{
+    background-color:silver;
+    background-image:
+            radial-gradient(circle at 100% 150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 0    150%, silver 24%, white 25%, white 28%, silver 29%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 50%  100%, white 10%, silver 11%, silver 23%, white 24%, white 30%, silver 31%, silver 43%, white 44%, white 50%, silver 51%, silver 63%, white 64%, white 71%, transparent 71%, transparent),
+            radial-gradient(circle at 100% 50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent),
+            radial-gradient(circle at 0    50%, white 5%, silver 6%, silver 15%, white 16%, white 20%, silver 21%, silver 30%, white 31%, white 35%, silver 36%, silver 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-size:100px 50px;
+    -moz-user-select: none;
+}
+#main{
+    margin-top: 100px;
+    border-radius: 50% 50%;
+    background: silver;
+    width: 450px;
+    height: 450px;
+}
+
+#part1{
+    width: 225px;
+    height: 225px;
+    border-radius:100% 0 0 0;
+    border:gray solid 25px;
+    background: darkblue;
+}
+#part1:hover{
+    background: blue;
+}
+#part2{
+    width: 225px;
+    height: 225px;
+    border:gray solid 25px;
+    border-radius:0 100% 0 0;
+    background: darkorange;
+    transform: translate(225px,-225px);
+}
+#part2:hover{
+    background: lightsalmon;
+}
+#part3{
+    width: 225px;
+    height: 225px;
+    border:gray solid 25px;
+    border-radius:0 0 100% 0;
+    background: darkred;
+    transform: translate(225px,-225px);
+}
+#part3:hover{
+    background: lightpink;
+}
+#part4{
+    width: 225px;
+    height: 225px;
+    border:gray solid 25px;
+    border-radius:0 0 0 100%;
+    background: darkcyan;
+    transform: translate(0px,-450px);
+}
+#part4:hover{
+    background: lawngreen;
+}
+#cont{
+    border-radius: 50% 50%;
+    background: snow;
+    width: 250px;
+    height: 250px;
+    border: solid 10px gray;
+    transform: translate(0,-350px);
+}
+#cont h1{
+    margin-top: 40px;
+    font-weight: bold;
+}
+#cont ul{
+    margin-left: -50px;
+}
+#cont li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 15px;
+}
+#cont button{
+    width: 40px;
+    height: 40px;
+    border: 5px gray solid;
+    border-radius: 50%;
+}
+#num{
+    width:50px;
+    font-size: 20px;
+    line-height: 1.5;
+    background: #2aabd2;
+    border: gray 5px solid;
+    border-radius: 5px;
+
+}
+#mode{
+    background: red;
+}
+#mode:hover{
+    background: greenyellow;
+}
+#start:active{
+    background: greenyellow;
+}
+#switch{
+    background: saddlebrown;
+    height: 34px;
+    width: 64px;
+    border: solid gray 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#sss{
+    background: blueviolet;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px 0 0 5px;
+    margin-left: -2px;
+
+}
+.selected{
+    background-image: linear-gradient(rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%) !important;
+}
