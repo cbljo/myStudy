@@ -1,0 +1,93 @@
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  min-width: 1400px;
+}
+
+a {
+  color: #00B7FF;
+}
+#head-main{
+  margin:-5px 1%;
+  background: #f1f1f1;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.logo a{
+  text-decoration: none;
+}
+.logo h3{
+  color: #2aabd2;
+}
+.logo p{
+  color: #9d9d9d;
+}
+#set{
+  transform: translate(150px,25px);
+}
+#logoo{
+  transform: translateX(50px);
+}
+#signupCont{
+  margin: 30px 1%;
+  background:white;
+  border: #cccccc 1px solid;
+  border-radius: 20px;
+  width: 98%;
+  padding: 20px ;
+}
+#signupCont p{
+  font-size: 20px;
+  line-height: 2;
+}
+#signupCont input{
+  width: 220px;
+  border: #ccc solid 1px;
+}
+#gender{
+  font-size: 20px;
+  line-height: 5;
+  height: 50px;
+  width: 220px;
+  background: snow;
+}
+#submitHd{
+  height: 50px;
+  border-radius: 10px;
+  background: snow;
+  border: #ccc solid 1px;
+  font-size: 20px;
+}
+#selfdesc{
+  width: 75%;
+  font-size: 20px;
+  padding: 10px;
+  border: #ccc solid 1px;
+  border-radius: 10px;
+}
+#submitForm{
+  margin-top: 20px;
+  width: 100px;
+  font-size: 20px;
+  border-radius: 5px;
+  border:#ccc solid 1px;
+  background: snow;
+  resize: none;
+}
+#submitForm2{
+  margin-left: 150px;
+  width: 100px;
+  font-size: 20px;
+  border-radius: 5px;
+  border:#ccc solid 1px;
+  background: lightblue;
+  line-height: 2;
+  resize: none;
+}
+#avatar{
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 2;
+  padding: 10px;
+  border-radius: 10px;
+}

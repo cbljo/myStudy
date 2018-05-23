@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/ku/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="/ku/jquery-3.2.1.min.js"></script>
+    <script src="/ku/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/ku/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+</head>
+<body>
+<%- include header %>
+<div id="signupCont">
+    <form action=""></form>
+    <div class="row">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-1 text-left">
+        <p>用户名</p>
+        <br>
+        <p>密码</p>
+        <br>
+        <p>重复密码</p>
+        <br>
+        <p>性别</p>
+        <br>
+        <br>
+        <br>
+        <p>头像文件</p>
+        <br>
+        <br>
+        <br>
+
+        <p>个人简介</p>
+    </div>
+    <div class="col-xs-5 text-left">
+        <input type="text" id="name" name="name" class="input-lg">
+        <br>
+        <br>
+        <input type="password" id="psw" name="password" class="input-lg">
+        <br>
+        <br>
+        <input type="password" class="input-lg" name="repassword" id="psw-2">
+        <br>
+        <br>
+        <select name="gender" id="gender" class="form-control">
+            <option>男</option>
+            <option>女</option>
+        </select>
+        <br>
+        <input type="file" name="avatar" id="avatar" class="file-loading">
+        <br>
+        <button id="submitHd">上传头像</button>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-6">
+            <textarea name="bio" id="selfdesc" cols="30" rows="5"></textarea>
+            <br>
+            <input type="submit" id="submitForm" value="提交">
+            
+        </div>
+    </div>
+</div>
+<div></div>
+<%- include footer %>
+</body>
+</html>

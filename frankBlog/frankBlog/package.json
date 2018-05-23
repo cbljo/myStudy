@@ -1,0 +1,29 @@
+{
+  "name": "Frankblog",
+  "version": "0.0.0",
+  "description": "Frank's blog",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "config-lite": "^2.1.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "express-formidable": "^1.0.0",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "marked": "^0.3.19",
+    "moment": "^2.22.0",
+    "morgan": "~1.9.0",
+    "semantic-ui": "^2.3.1",
+    "supervisor": "^0.12.0",
+    "sha1": "^1.1.1",
+    "mongolass": "^4.2.0"
+  }
+}
